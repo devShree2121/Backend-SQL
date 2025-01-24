@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Page</title>
+    <style>
+        table,th,tr,td{
+            border: 1.5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h3> Here's the list of all the users from the database</h3>
+
+    <table>
+<tr>
+        <th> id</th>
+        <th> Name</th>
+        <th> email</th>
+    </tr>
+   <% for(let i=0;i<userData.length;i++){%>
+
+    <tr>
+       <td> <%=userData[i].id%>
+       </td>
+        <td> <%=userData[i].name %></td>%>
+        <td> <%=userData[i].email %></td>%>
+        <td> <a href="http://localhost:8080/edit/<%= userData[i].id %>"> edit</td>
+        <td> <button> delete</button></td>
+    </tr>
+
+    <%}%>
+
+</table>
+
+<button> Join us </button>
+
+</body>
+</html>
+

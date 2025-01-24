@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    
+
+    <H1> Change your username</H1>
+
+    <form action="http://localhost:8080/edit/<%= userData.id %>?_method=PATCH" method="POST">
+        <textarea name="usename" placeholder="Enter new username"><%= userData.name %></textarea><br>
+        <input type="text" name="password" placeholder="Enter your password"><br>
+        <button type="submit">Change Name</button>
+      </form>
+      
+</body>
+</html>
